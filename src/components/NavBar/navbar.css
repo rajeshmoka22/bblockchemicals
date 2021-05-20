@@ -41,10 +41,6 @@ header {
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
   padding: 0.5rem 4rem;
   background-color: #fff;
 }
@@ -159,8 +155,9 @@ ul {
   .menu {
     position: absolute;
     top: 59px;
-    background: linear-gradient(to right bottom, #1d3e67, rgb(30 132 71));
+    background: #fff;
     left: 0;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     /* width: 100%; */
@@ -174,7 +171,7 @@ ul {
 
   .link {
     display: block !important;
-    color: #fff;
+    color: #000;
   }
 
   .right-menu {
