@@ -8,8 +8,12 @@
   color: #008248 !important;
 }
 
+.brand-logo {
+  height: 50px;
+  width: 150px;
+}
+
 .cart {
-  background-color: yellow;;
   color: black;
   border: none;
   outline: none;
@@ -79,7 +83,11 @@ ul {
 }
 
 .right *{
-  margin:0 0.5rem;
+  margin:0 0.4rem;
+}
+
+.join-buttons {
+  cursor: pointer;
 }
 
 .link {
@@ -195,6 +203,6 @@ ul {
     transform: rotate(45deg) translateY(5px);
   }
   .rotate-45 {
-    transform: rotate(-45deg) translateY(-5px);
+    transform: rotate(-45deg) translateY(-6px);
   }
 }

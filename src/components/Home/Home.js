@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import './home.css';
-import image1 from '../../assets/CarouselImage1.jpg';
-import image2 from '../../assets/CarouselImage2.jpg';
-import image3 from '../../assets/CarouselImage3.jpg';
-import pharmacist from '../../assets/Pharmacist.jpg';
+import image1 from '../../assets/images/CarouselImage1.jpg';
+import image2 from '../../assets/images/CarouselImage2.jpg';
+import image3 from '../../assets/images/CarouselImage3.jpg';
+import pharmacist from '../../assets/images/Pharmacist.jpg';
 
 function Home() {
   return (
