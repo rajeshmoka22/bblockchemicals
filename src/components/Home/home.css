@@ -1,4 +1,3 @@
-
 .carousel-image {
   vertical-align: middle;
   border-style: none;
@@ -20,8 +19,15 @@
   padding: 1rem;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .company-info-container {
     flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .company-info-container {
+    padding: 0.5rem;
   }
 }
