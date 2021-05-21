@@ -1,5 +1,57 @@
 [
   {
-    "name": "product"
+    "serialNum": "1",
+    "catalogNum": "A01003",
+    "hsnCode": "",
+    "gst": "18%",
+    "name": "acetone",
+    "cas": "",
+    "pack": "25gm",
+    "cost": "630.00",
+    "availability": true
+  },
+  {
+    "serialNum": "2",
+    "catalogNum": "A01003",
+    "hsnCode": "",
+    "gst": "18%",
+    "name": "acetone",
+    "cas": "",
+    "pack": "25gm",
+    "cost": "630.00",
+    "availability": true
+  },
+  {
+    "serialNum": "3",
+    "catalogNum": "A01003",
+    "hsnCode": "",
+    "gst": "18%",
+    "name": "acetone",
+    "cas": "",
+    "pack": "25gm",
+    "cost": "630.00",
+    "availability": true
+  },
+  {
+    "serialNum": "4",
+    "catalogNum": "A01003",
+    "hsnCode": "",
+    "gst": "18%",
+    "name": "acetone",
+    "cas": "",
+    "pack": "25gm",
+    "cost": "630.00",
+    "availability": true
+  },
+  {
+    "serialNum": "5",
+    "catalogNum": "A01003",
+    "hsnCode": "",
+    "gst": "18%",
+    "name": "acetone",
+    "cas": "",
+    "pack": "25gm",
+    "cost": "630.00",
+    "availability": true
   }
 ]
