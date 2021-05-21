@@ -22,7 +22,7 @@
 }
 
 .mainContent {
-  margin-top: 6.75rem;
+  margin-top: 7.5rem;
 }
 
 header {
@@ -100,8 +100,6 @@ ul {
 
 .btn {
   height: auto;
-  border-radius: 2rem;
-  border: 1px solid black;
   padding: 6px 16px;
   font-family: Cabin, sans-serif;
   font-weight: bold;
