@@ -2,8 +2,9 @@ import AboutUs from '../components/AboutUs/AboutUs.js';
 import Home from '../components/Home/Home.js';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Products from '../components/Products/Products';
+import Cart from '../components/Cart/Cart';
 
-const routes = [
+export const breadCrumb = [
   {
     path: '/',
     exact: true,
@@ -27,6 +28,15 @@ const routes = [
     exact: false,
     component: ContactUs,
     name: 'Contact Us'
+  }
+];
+const routes = [
+  ...breadCrumb,
+  {
+    path: '/cart',
+    exact: false,
+    component: Cart,
+    name: 'Cart'
   }
 ];
 

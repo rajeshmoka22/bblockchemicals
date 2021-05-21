@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import products from './../../assets/data/mockApi/products.json';
-import { ADD_TO_CART } from '../Cart/actions';
+import { REMOVE_FROM_CART } from './actions';
 
-function Products(props) {
-  const { dispatch } = props;
-  const addToCart = (product) => {
-    dispatch({ type: ADD_TO_CART, data: product });
+function Cart(props) {
+  const {cart, auth, dispatch} = props;
+  const { cartProducts } = cart;
+  const removeFromCart = (index) => {
+    dispatch({ type: REMOVE_FROM_CART, data: index });
   }
   return (
-    <div className="p-4">
+    <div className="p-4" style={{ height: '100%' }}>
+      <h2>Cart</h2>
       <Table bordered striped hover responsive="xl">
         <thead>
           <tr>
@@ -27,15 +28,27 @@ function Products(props) {
           </tr>
         </thead>
         <tbody>
-          <RenderTableData addToCart={addToCart} />
+          <RenderTableData
+            removeFromCart={removeFromCart}
+            cartProducts={cartProducts}
+            isAuthenticated={auth.isAuthenticated}
+          />
         </tbody>
       </Table>
+      {
+        !cartProducts.length ? 
+        (
+          <h3 className="mt-4">
+            It's lonely here. Add some products to see here.
+          </h3>
+        ) : ''
+      }
     </div>
   )
 }
 
-function RenderTableData({ addToCart }) {
-  return products.map((product) => {
+function RenderTableData({ cartProducts, removeFromCart }) {
+  return cartProducts.map((product, index) => {
       const { serialNum, catalogNum, hsnCode, gst, name, cas, pack, cost, availability } = product
       return (
         <tr key={serialNum}>
@@ -48,15 +61,17 @@ function RenderTableData({ addToCart }) {
             <td>{pack}</td>
             <td>{cost}</td>
             <td>{availability ? 'Yes' : 'No'}</td>
-            <td><button className="btn btn-warning" onClick={() => addToCart(product)}>Add to cart</button></td>
+            <td><button className="btn btn-warning" onClick={() => removeFromCart(index)}>Remove</button></td>
         </tr>
       )
   })
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
-  return state
+  return ({
+    cart: state.cart,
+    auth: state.auth
+  })
 }
 
-export default connect(mapStateToProps)(Products);
+export default connect(mapStateToProps)(Cart);

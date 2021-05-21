@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
+import { cart } from '../components/Cart/state';
 
 const authState = {
   isAuthenticated: false
 }
 
-const authReducer = (state=authState, action) => {
+const auth = (state=authState, action) => {
   switch(action.type){
     case 'UPDATE_AUTH':
       return ({
@@ -16,4 +17,4 @@ const authReducer = (state=authState, action) => {
   }
 }
 
-export default combineReducers({ authReducer });
+export default combineReducers({ auth, cart });
