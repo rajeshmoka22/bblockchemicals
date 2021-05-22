@@ -17,11 +17,11 @@ function NavBar(props) {
           <div className="nav-group">
             <div className="nav-wrapper">
               <div>
-                <Nav.Link href='/' className="heading-chemicals">
+                <Link to='/' className="heading-chemicals">
                   <div className="brand-logo">
                     <img src={logo} alt="bb chemicals logo" className="brand-logo" />
                   </div>
-                </Nav.Link>
+                </Link>
               </div>
               <div className="right">
                 <div className="right-menu">
@@ -60,13 +60,13 @@ function NavBar(props) {
               {
                 breadCrumb.map(route => {
                   return (
-                    <Nav.Link
+                    <Link
                       key={route.path}
-                      href={route.path}
+                      to={route.path}
                       className={(pathname === route.path) ? 'd-inline link active' : 'd-inline link' }
                     >
                       {route.name}
-                    </Nav.Link>
+                    </Link>
                   )
                 })
               }
