@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Navbar, Nav, Container, FormControl, Form, Button } from 'react-bootstrap';
 import { breadCrumb } from '../../routes/routes';
 import './navbar.css';
 import logo from '../../assets/images/logo.svg';
 
 function NavBar(props) {
   const { pathname } = props.location;
-  const { cart } = props;
+  const { cart, auth } = props;
   const [isMenuOpen, setMenuOpen] = useState(false);
   return (
     <React.Fragment>
@@ -29,7 +28,11 @@ function NavBar(props) {
                     <input className="product-search-input" type="text"  placeholder="Search" />
                   </div>
                   <div className="join-buttons d-flex align-items-center m-0">
-                    <div className="sign-in-text text-white" onClick={() => console.log('clicked')}>Login</div>
+                    {!auth.isAuthenticated && (
+                      <Link to="/signin">
+                        <div className="sign-in-text text-white" onClick={() => console.log('clicked')}>Login</div> 
+                      </Link>
+                    )}
                     <div className="cart d-flex align-items-center m-0">
                       <Link to='/cart'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" className="bi bi-cart-fill" viewBox="0 0 16 16">
@@ -81,7 +84,8 @@ function NavBar(props) {
 
 const mapStateToProps = (state) => {
   return ({
-    cart: state.cart
+    cart: state.cart,
+    auth: state.auth
   })
 }
 
