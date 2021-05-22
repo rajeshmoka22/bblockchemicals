@@ -24,9 +24,10 @@
 
 .cart-count {
   position: absolute;
-  top: -0.75rem;
-  left: 1.25rem;
+  top: -0.55rem;
+  left: 1rem;
   color: yellow;
+  font-size: 0.8rem;
 }
 
 .mainContent {
@@ -133,7 +134,7 @@ ul {
   color: #fff;
 }
 
-.nav-routes{
+.nav-routes {
   display: flex;
   justify-content: space-around;
 }
